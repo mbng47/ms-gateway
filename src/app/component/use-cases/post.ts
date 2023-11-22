@@ -26,9 +26,9 @@ export default function createPost({
       if (path.includes('auth')) {
         const authPath = 'http://localhost:3011/api/v1/user/auth'
         const authResults = await makeFetch({ params, path: authPath, method: 'post'})
-
+        // console.log(params);
         const results = await authResults.json()
-
+        console.log(results)
       
         const token = results.data[0].email;
 
